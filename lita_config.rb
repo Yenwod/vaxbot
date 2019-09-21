@@ -3,8 +3,7 @@ Lita.configure do |config|
   config.robot.name = "Lita"
 
   if ENV['RACK_ENV'] == 'production'
-    #config.robot.adapter = :slack
-    config.robot.adapter = :shell
+    config.robot.adapter = :slack
     config.redis[:url] = ENV.fetch('REDISCLOUD_URL','')
   else
     config.robot.adapter = :shell
