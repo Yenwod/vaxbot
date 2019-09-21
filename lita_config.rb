@@ -3,14 +3,14 @@ Lita.configure do |config|
   config.robot.name = "Lita"
 
   if ENV['RACK_ENV'] == 'production'
-    config.robot.adapter = :slack
+    #config.robot.adapter = :slack
     config.redis[:url] = ENV.fetch('REDISCLOUD_URL','')
   else
     config.robot.adapter = :shell
   end
 
   # slack adapter demands a value even in dev when we aren't using it...
-  config.adapters.slack.token = ENV.fetch('SLACK_TOKEN', '')
+  #config.adapters.slack.token = ENV.fetch('SLACK_TOKEN', '')
 
   # The locale code for the language to use.
   # config.robot.locale = :en
