@@ -2,8 +2,9 @@ source "https://rubygems.org"
 
 ruby '2.5.3'
 
-gem "lita"
+gem 'lita', '~> 4.7', '>= 4.7.1'
 gem "lita-vaxcalc"
+gem 'lita-slack', '~> 1.8'
 
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
